@@ -15,7 +15,7 @@ for directory in (LOG_DIR, PID_DIR, STATE_DIR, CMD_DIR):
     directory.mkdir(exist_ok=True)
 
 processes = []
-print("[manager] build=container4-bridge-v2", flush=True)
+print("[manager] build=container4-bridge-v3", flush=True)
 
 for i in range(1, 21):
     bot_id = f"bot-{i:02d}"
