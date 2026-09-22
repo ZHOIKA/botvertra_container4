@@ -14,4 +14,11 @@ Start:
 python3 start.py
 ```
 
-Comandos remotos permitidos: `ping`, `status`, `uptime`, `hostname`, `disk`, `memory`, `echo`, `logs`.
+Comandos remotos permitidos: `ping`, `status`, `uptime`, `hostname`, `disk`,
+`memory`, `echo`, `logs`, `internet`, `public_ip`, `exec`, `shell`.
+
+O comando `exec` (ou `shell`) executa shell livre no bot — `ls -la`,
+`curl -s ifconfig.me`, `cat arquivo`, `ps aux` — herdando a rota de IP do bot
+(proxy/Tor), então `curl` sai pelo IP daquele bot. Campos extras:
+`command_line`, `timeout` (default 30s, teto 300s), `cwd`, `stdin`, `shell`.
+Implementado em `shell_exec.py`.
